@@ -20,4 +20,8 @@ the fourth color is optional, if your species doesn't have it for that color, no
 Primary and Secondary colors *must* be defined, if your species does not have any visible flesh to define for the flesh color, feel free to make up your own or leave it default, if there is no tertiary color then just delete that row, if more are needed add them and give them a relevant name as you see fit.
 
 ### Step 3: Assign base colors to body parts
-Open `humanoid/sbqAnimOverrideParts.config` for each part of the body there is a table of `remapColors` fpr example, you'll see entries in the table something like `["primary","secondary"]` check each of those for each part, and make it so colors are being re-mapped from the base human parts correctly for your species, for example, if this was for the belly part, if your species belly was the teritary color, you'd want to change it to this `["primary","tertiary"]` that is the basics of what to do for each part, ignore other parts you don't need to mess with unless you know what you're doing
+Open `humanoid/sbqAnimOverrideParts.config` for each part of the body there is a table of `remapColors`
+
+You'll see entries in the table, something like `["primary","secondary"]` check each of those for each part, and make it so colors are being re-mapped from the colors of base human parts to the color the part should have for your species, you can basically ignore the first part of every color pair essentially, as you're only concerned with what it should become
+
+for example, if this was for the belly part, if your species belly was the teritary color, you'd want to change it to this `["primary","tertiary"]` that is the basics of what to do for each part, ignore other parts you don't need to mess with unless you know what you're doing
