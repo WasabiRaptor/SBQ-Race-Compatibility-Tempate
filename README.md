@@ -25,3 +25,6 @@ Open `humanoid/sbqAnimOverrideParts.config` for each part of the body there is a
 You'll see entries in the table, something like `["primary","secondary"]` check each of those for each part, and make it so colors are being re-mapped from the colors of base human parts to the color the part should have for your species, you can basically ignore the first part of every color pair essentially, as you're only concerned with what it should become
 
 for example, if this was for the belly part, if your species belly was the teritary color, you'd want to change it to this `["primary","tertiary"]` that is the basics of what to do for each part, ignore other parts you don't need to mess with unless you know what you're doing
+
+### Step 4: Give good colonytags
+Check the `.tenant` files in the folders within `tenants/` make sure they require the correct colonytags for your species, check the original mod's tenants to compare, or define your own if the original mod didn't have any, as a unique feature to SBQ tenants, you can order furniture from their deed, and it is defined per tenant, it should be self explainitory how it works when looking at the file
