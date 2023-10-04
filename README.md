@@ -13,9 +13,9 @@ replace `speciesName` in all files and filenames with the internal name of your 
 ### Step 2: Assign Base Color Map
 Starbound replaces colors on the base sprites of a species using color replace directives which are uniquely defined per species, this makes it difficult to use any assets interchangibly because most species have entierly different color palettes, therefore we have to define some extra data for anim overrides so we can have colors replaced in a smart way
 
-open the images in the `humanoid/` folder for your respective species in the original mod, and open the `.patch` file in the `species/` folder in this mod, within that file, you will see tables of strings for color hex codes, you are going to want to define the color palette for each color in the images of your species, first index in each table being the outline color, second being the shading color, third being the main color, and fourth being the highlight color
+open the images in the `humanoid/` folder for your respective species in the original mod, and open the `.patch` file in the `species/` folder in this mod, within that file, you will see tables of strings for color hex codes, you are going to want to define the color palette for each color in the images of your species, first index in each table being the left outline color, second being the shading color or right outline, third being the main color, and fourth being the highlight color
 
-the fourth color is optional, if your species doesn't have it for that color, no need to define it, however if you're missing one of the other color indexes, I suggest duplicating one of the others that you think fits best into its slot, **you cannot simply define a new color here**
+the fourth color is optional, if your species doesn't have it for that color, no need to define it, however if you're missing one of the other color indexes, I suggest duplicating one of the others that you think fits best into its slot, **you cannot simply define a new color here** colors which are not set by the species replace color directives will be unchanged and therefore would appear the same regardless of the individual's customization
 
 Primary and Secondary colors *must* be defined, if your species does not have any visible flesh to define for the flesh color, feel free to make up your own or leave it default, if there is no tertiary color then just delete that row, if more are needed add them and give them a relevant name as you see fit.
 
@@ -28,3 +28,6 @@ for example, if this was for the belly part, if your species belly was the terit
 
 ### Step 4: Give good colonytags
 Check the `.tenant` files in the folders within `tenants/` make sure they require the correct colonytags for your species, check the original mod's tenants to compare, or define your own if the original mod didn't have any, as a unique feature to SBQ tenants, you can order furniture from their deed, and it is defined per tenant, it should be self explainitory how it works when looking at the file
+
+### Step 5: Include the original race mod
+in the original mod's files (you may need to enable viewing hidden files) there should be a `_metadata` file open it as well as the one inside this mod, copy the `name` value from the race mod, it should be a string, then look in the metadata for this mod, replace `"Race Mod Name"` in the `includes` with the value of your race mod's name, this will make sure the patches load after the mod, and correctly add the relevant data

@@ -7,6 +7,7 @@
 	"name" : "SBQ Race Compatibility Template", // the name other mods check for
 	"friendlyName" : "SBQ Race Compatibility Template", // the string players would see
 	"includes" : [
-		"Starbecue"
+		"Starbecue",
+		"Race Mod Name"
 	]
 }
