@@ -1,3 +1,5 @@
+WARNING This template will not be compatible with SBQ versions past 2.8 please wait for it to be updated if you are going to use it!
+
 # SBQ Race Compatibility Tempate
 template to quickly add compatibility to most modded races
 
