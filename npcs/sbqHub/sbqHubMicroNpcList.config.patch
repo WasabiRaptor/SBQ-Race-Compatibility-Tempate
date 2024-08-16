@@ -1,5 +1,6 @@
 [
 	// this patch adds the safe hub version of the NPC to the random spawn pool for NPCs on that map
+	// this is the pool of NPCs that can spawn as a micro
 	{
 		"op": "add",
 		"path": "/-",

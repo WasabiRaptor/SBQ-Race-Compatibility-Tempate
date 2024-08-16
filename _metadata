@@ -1,11 +1,11 @@
 {
-	"version" : "0.1",
+	"version" : "3.0",
 	"tags" : "",
 	"author" : "Someone cool",
 	"description" : "They're here for the Starbecue",
 	"link" : "https://github.com/Zygahedron/Starbecue",
-	"name" : "SBQ Race Compatibility Template", // the name other mods check for
-	"friendlyName" : "SBQ Race Compatibility Template", // the string players would see
+	"name" : "SBQ specieName Compatibility", // the name other mods check for
+	"friendlyName" : "SBQ specieName Compatibility", // the string players would see
 	"includes" : [
 		"Starbecue",
 		"Race Mod Name"
