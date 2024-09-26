@@ -21,7 +21,7 @@ Further colors can be defined for use in SBQ's replacing, however 'primary' and 
 
 ### Step 3: Assign base colors to body parts
 
-Within the `speciesName.species.patch` You'll find the `colorRemapGlobalTags` table, each entry is the name of an animation tag, and a list of replacements to do based on the base color map, for each one you'll see something like `["primary","secondary"]` check each of those for each part, colors are being re-mapped from the color of base human part to the color the part should have for your species, you can basically ignore the first part of every color pair essentially, as you're only concerned with what you're replacing it with.
+Within the `speciesName.species.patch` You'll find the `colorRemapGlobalTags` table, each entry is the name of an animation tag, and a list of replacements to do based on the base color map, for each one you'll see something like `["primary","secondary"]` check each of those for each part, colors are being re-mapped from the color of base human part to the color the part should have for your species, you can basically ignore the first part of every color pair, that simply what defines the "human" color getting replaced in the base animations, as you're only concerned with what you're replacing it with.
 
 for example, if this was for the belly part, if your species belly was say a 'teritary' color, you'd want to change it to this `["primary","tertiary"]` that is the basics of what to do for each part.
 
