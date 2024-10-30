@@ -8,8 +8,8 @@
 	},
 	"colorRemapGlobalTags" : {
 		"bellyColorRemap" : [
-			{"a94783":"d39c6c", "check" : {"navelVisible":true}}, // replaces the single pixel of the navel with a color in the primary palette to have it visible or not
-			{"a94783":"ffc181", "check" : {"navelVisible":false}},
+			{"00adba":"bc1002", "check" : {"navelVisible":true}}, // replaces the single pixel of the navel with a color in the primary palette to have it visible or not
+			{"00adba":"eb3629", "check" : {"navelVisible":false}},
 			["primary","primary"]
 		],
 		"cockColorRemap" : [
@@ -23,6 +23,8 @@
 		],
 		"breastsColorRemap" : [
 			["primary","primary"],
+			["primary_180","primary"], // this is for a few pixels near the top of the breasts where they attach to the chest in expand animations, usually the same as the main breast color
+			// but some sprites you may want to switch it out if the color immediately above the breasts is different
 			["flesh","flesh", {"nipplesVisible":true}], // replaces the nipple colors based on whether they're visible or not
 			["flesh","primary", {"nipplesVisible":false}]
 		]
@@ -35,6 +37,8 @@
 			},
 			// default setting values for this species
 			"defaultSettings" : {
+				"nipplesVisble" : false,
+				"navelVisible" : true
 			}
 		}
 	],
