@@ -10,12 +10,14 @@ You'll need to unpack the files for the modded race you wish to add compatibilit
 ### Step 1: Replace Species Name
 replace `speciesName` in all files and filenames in this mod's folder with the internal name of your respective modded species, if you don't know what that is, find the `speciesName.species` file in the `species/` folder and open it to get the `kind` value of that species within its file, make sure to get this value rather than just assuming it matches the filename, because starbound has some cases where it's case sensitive and some where it isn't, the `kind` value is what's generally the 'correct' one.
 
+Make sure to check if your filesystem or editor has a find and replace to have an easier time doing mass edits!
+
 ### Step 2: Assign Base Color Map
 Starbound replaces colors on the base sprites of a species using color replace directives which are uniquely defined per species, this makes it difficult to use any assets interchangibly because most species have entierly different color palettes, therefore we have to define some extra data for SBQ's scripts to recolor its animations to work with your species, else the animations will just look like they're human skin colored.
 
 Open the images in the `humanoid/` folder for your respective species in the unpacked mod, and open the `speciesName.species.patch` file in the `species/` folder in this mod, within that file, you will see `baseColorMap` with tables of strings for color hex codes, you are going to want to define the color palette for each color in the images of your species, first index in each table being the dark outline shade, second being the shading or light outline, third being the main shade, and fourth being the highlight. If their base palette has more then 4 shades for a color, then just define whatever is closest for how SBQ will use it.
 
-The highlight shade is optional, if your species doesn't have it for that color, no need to define it, however if you're missing one of the other color indexes, I suggest duplicating one of the others that you think fits best into its slot, **you cannot simply define new colors here** colors which are not set by the species replace color directives will be unchanged and therefore would appear the same regardless of the individual's customization.
+The highlight shade is optional, if your species doesn't have it for that color, remove it or duplicate the previous hex color, however if you're missing one of the other color indexes, I suggest duplicating one of the others that you think fits best into its slot, **you cannot simply define new colors here** colors which are not set by the species replace color directives will be unchanged and therefore would appear the same regardless of the individual's customization.
 
 Further colors can be defined for use in SBQ's replacing, however 'primary' and 'secondary' are what are used for the color replacements on the digest drop items as well as the infuse colors, so it's important to define them.
 

@@ -1,6 +1,8 @@
 [{"op":"merge", "path":"", "value": {
 
 	"baseColorMap" : {
+		// colors are from darkest to lightest from left to right
+		// if your species doesn't have a highlight color, either remove it or copy the lightest color over it
 		"primary" : ["c7815b", "d39c6c", "ffc181", "ffe2c5"],
 		"secondary" : ["951500", "be1b00", "dc1f00", "f32200"],
 		"hair" : ["735e3a", "a38d59", "d9c189", "f7e7b2"],
@@ -8,8 +10,12 @@
 	},
 	"colorRemapGlobalTags" : {
 		"bellyColorRemap" : [
-			{"00adba":"bc1002", "check" : {"navelVisible":true}}, // replaces the single pixel of the navel with a color in the primary palette to have it visible or not
+			// replaces the single pixel of the navel with a color in the primary palette to have it visible or not
+			// don't change these hex codes unless you've made custom belly sprites for your species
+			{"00adba":"bc1002", "check" : {"navelVisible":true}},
 			{"00adba":"eb3629", "check" : {"navelVisible":false}},
+
+			// the actual color re-map
 			["primary","primary"]
 		],
 		"cockColorRemap" : [
@@ -24,7 +30,8 @@
 		"breastsColorRemap" : [
 			["primary","primary"],
 			["primary_180","primary"], // this is for a few pixels near the top of the breasts where they attach to the chest in expand animations, usually the same as the main breast color
-			// but some sprites you may want to switch it out if the color immediately above the breasts is different
+			// but some sprites you may want to switch it out if the color immediately above the breasts or on the shoulder is different and looks odd at larger sizes
+
 			["flesh","flesh", {"nipplesVisible":true}], // replaces the nipple colors based on whether they're visible or not
 			["flesh","primary", {"nipplesVisible":false}]
 		]
@@ -63,6 +70,7 @@
 	],
 
 	// data to used when this species is infused (Sentient Fat, Belly TF, CTF etc.)
+	// I may make notes on how to configure this in the future
 	"infuseData" : [
 		"/humanoid/any/basicInfuseData.config" // a path to base values all species should share
 	]
