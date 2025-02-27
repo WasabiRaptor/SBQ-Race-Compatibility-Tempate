@@ -3,7 +3,7 @@ Template to quickly add SBQ compatibility to most modded races.
 
 Put this folder within your mods folder and then follow the instructions.
 
-A nice fan has made a pretty good [video tutorial](https://www.youtube.com/watch?v=Eu_TBP5HCnw) which you can follow along with, however I would reccommend reading some of the steps here to better understand why you're doing each step though the video may be better to actually see the process.
+A nice fan has made a pretty good [video tutorial](https://youtu.be/1WmgYPvf_SE) which you can follow along with, however I would reccommend reading some of the steps here to better understand why you're doing each step though the video may be better to actually see the process.
 
 You'll need to unpack the files for the modded race you wish to add compatibility with, check this [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=745239455) to learn how to do so.
 
