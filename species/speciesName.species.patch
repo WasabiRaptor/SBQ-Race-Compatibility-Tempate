@@ -57,7 +57,10 @@
 	// settings, as well as if any values should be overrided or are invalid
 	"sbqSettingsConfig": {
 		"defaultSettings": {
-			"any":{},
+			"any":{
+				"nipplesVisible" : false,
+				"navelVisible" : false
+			},
 			"player" : {},
 			"npc" : {},
 			"object" : {}
