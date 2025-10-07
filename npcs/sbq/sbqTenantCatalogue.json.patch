@@ -1,7 +1,0 @@
-[{"op":"merge", "path":"","value":{
-	// this isn't necessary to have them summonable, but adds them to the list of NPCs the deed will cycle through
-	// the key is the shortcut you can type in, the value being the tenant ID the game will actually use for spawning
-	"speciesName" : "sbq_tenant_speciesName",
-	// if you use a table for the value, it will check the room for tier based colony tags and try to select the relevant one
-	"guard_speciesName" : [ "sbq_guard_speciesName", "sbq_guardT2_speciesName", "sbq_guardT3_speciesName", "sbq_guardT4_speciesName" ]
-}}]
