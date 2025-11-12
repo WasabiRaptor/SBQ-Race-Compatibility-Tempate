@@ -12,7 +12,7 @@ Replace `speciesName` in the filename and contents of `/species/speciesName.spec
 
 Make sure to check if your filesystem or editor has a find and replace to have an easier time doing mass edits!
 
-### Step 4: Setup Tenant Data
+### Step 2: Setup Tenant Data
 Open `/species/speciesName.species.patch` and look for `sbqTenantData` near the top of the file, within it you'll find `colonyTagCriteria`.
 You will want to set fitting colony tags for your race, check if the source mod has any `.tenant` files within its `tenants` folder if it has one. If you do find any, open them, and copy their `colonyTagCriteria` into our patch. If there aren't any tenants, check if the mod has any objects that have `colonyTags` and define amounts for those tags, do be careful about this! Lots of race templates have colony tags on their copy-pasted ship objects, but have no actual objects belonging to their species. If theres no objects aside from ship objects with the species colony tags, assign them a combination of colony tags from the base game assets that would fir their theme.
 
@@ -44,14 +44,14 @@ For example, the order-able furniture for the Nickit:
 }
 ```
 
-### Step 2: Assign Base Color Palette
+### Step 3: Assign Base Color Palette
 Starbound replaces colors on the base sprites of a species using color replace directives which are uniquely defined per species, this makes it difficult to use any assets interchangibly because most species have entierly different color palettes, therefore we have to define some extra data for SBQ's scripts to recolor its animations to work with your species, else the animations will just have funky colors.
 
 Open the images in the `humanoid/` folder for your respective species in the unpacked mod, and open the `/species/speciesName.species.patch` file here. Look for `baseColorPalette`, you are going define a list of hex colors going from darkest to lightest, for each color in the sprite. These should be lists of 3-4 hex colors, where the first color is the outline and the fourth color is an optional highlight, if your color doesn't have a highlight, just remove it from the list. Do remember that **you cannot define 'new' colors here** colors which are not set by the species replace color directives will be unchanged and therefore would appear the same regardless of an individual's customization.
 
 Further colors can be defined for use in SBQ's replacing, however 'primary' and 'secondary' are what are used for the color replacements on the digest drop items, so it's important to define them.
 
-### Step 3: Assign Replace Colors to Generated Images
+### Step 4: Assign Replace Colors to Generated Images
 Within `/species/speciesName.species.patch` look for `sbqPartImages`, each entry is the relative path from `/humanoid/speciesName/` where an image will be generated when mods are loading, these images are used for SBQ's vore animations and are modified versions of the base species' images as well as recolored versions of animations from SBQ to match your species. Each entry has a `sourceImage` which is the image to copy and modify, `processingDirectives` a string of starbound's image processing directives to apply to the image, `patches` a list of image patching scripts to modify the image, and then lastly `remapDirectives` a list of pairs that are used to generate the color replace directives.
 
 For most races, you will only need to concern yourself with the parts that have `remapDirectives`, simply go through the list and read the comments, replacing the second entry in each pair with the name of the color in the pallete it should be for your species.
